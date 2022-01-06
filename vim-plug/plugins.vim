@@ -16,6 +16,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
 
+    " quoting/parenthesizing made simple
+    Plug 'tpope/vim-surround'
     "Vim Traning
     Plug 'ThePrimeagen/vim-be-good' 
     " Better Syntax Support

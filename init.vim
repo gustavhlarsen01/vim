@@ -6,7 +6,6 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 colorscheme gruvbox
 set background=dark
 
-"Show Strong color
 set termguicolors
 
 "Sets how man" " y lines of history VIM has to remember
@@ -43,7 +42,7 @@ set nowb
 set noswapfile
 
 "Use spaces instead of tabs
-set expandtab
+"set expandtab
 
 "Be smart when using tabs ;)
 set smarttab
@@ -68,7 +67,7 @@ highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 set cursorline
 
 
-set scrolloff=8
+set scrolloff=15
 
 "highlights the error in a column on the side
 "set signcolumn=yes
@@ -81,7 +80,8 @@ set hidden
 "Plugin Toggle keys
 nmap <F2> :NERDTreeToggle<CR>
 nmap <F3> :UndotreeToggle<CR>
-nmap <F4> :VimBeGood<CR>
+nmap <F4> :Files<CR>
+nmap <F5> :VimBeGood<CR>
 
 "Leader key remapped to space key
 let mapleader = " "
@@ -102,7 +102,6 @@ nnoremap <silent> <Leader>+ :vertical resize +10<CR>
 nnoremap <silent> <Leader>- :vertical resize -10<CR>
 
 "Open newtab
-nnoremap <leader>pv :wincmd v<bar> :NERDTree <bar> <CR> 
 nnoremap <leader>pn :wincmd v<CR>
 
 "Better Y
