@@ -18,7 +18,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " quoting/parenthesizing made simple
     Plug 'tpope/vim-surround'
-    "Vim Traning
+    " Vim Training
     Plug 'ThePrimeagen/vim-be-good' 
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
