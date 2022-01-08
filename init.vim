@@ -1,5 +1,6 @@
 "Leader keys
 "d: Vim surround
+"s: Vim surround
 "f: Spell check
 "pn: Split screen to duplicate
 "h: Switch tab 
@@ -7,7 +8,14 @@
 
 filetype off
 
+"Python highlight problem
+let python_highlight_all = 1
+let python_highlight_space_errors = 0
+
+"plugins
 source $HOME/.config/nvim/vim-plug/plugins.vim
+
+set encoding=UTF-8
 
 "Vim theme
 colorscheme gruvbox
@@ -86,10 +94,9 @@ set nohlsearch
 set hidden
 
 "Plugin Toggle keys
-nmap <F2> :NERDTreeToggle<CR>
-nmap <F3> :UndotreeToggle<CR>
-nmap <F4> :Files<CR>
-nmap <F5> :VimBeGood<CR>
+nnoremap <C-j> :NERDTreeToggle<CR>
+nnoremap <C-k> :Files<CR>
+nnoremap <C-l> :UndotreeToggle<CR>
 
 "Leader key remapped to space key
 let mapleader = " "
@@ -131,7 +138,8 @@ inoremap ? ?<c-g>u
 "Moving text
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-inoremap <C-j> <esc>:m .+1<CR>==
-inoremap <C-k> <esc>:m .-2<CR>==
 nnoremap <leader>k :m .-2<CR>==
 nnoremap <leader>j :m .+1<CR>==
+
+"quick end semicolon
+nnoremap <leader>a $a;<Esc>
