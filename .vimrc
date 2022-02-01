@@ -17,7 +17,7 @@ Plug 'mbbill/undotree'
 
 call plug#end()
 
-"GVim 
+"GVim in Windows
 set guifont=Consolas_NF:h13
 "set guioptions-=m  "menu bar
 set guioptions-=T  "toolbar
