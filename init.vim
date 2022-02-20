@@ -3,8 +3,6 @@
 "s: Vim surround
 "f: Spell check
 "pn: Split screen to duplicate
-"h: Switch tab 
-"l: Switch tab
 
 
 filetype off
