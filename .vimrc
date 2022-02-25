@@ -15,13 +15,13 @@ Plug 'sheerun/vim-polyglot'
 Plug 'mbbill/undotree'
 
 call plug#end()
-
+*/
 "GVim in Windows
 set guifont=Consolas_NF:h13
 "set guioptions-=m  "menu bar
 set guioptions-=T  "toolbar
 set guioptions-=r  "scrollbar
-
+/*
 set encoding=UTF-8
 
 "Vim theme
