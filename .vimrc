@@ -3,8 +3,7 @@
 "s: Vim surround
 "f: Spell check
 "pn: Split screen to duplicate
-"h: Switch tab 
-"l: Switch tab
+
 
 filetype off
 
@@ -25,10 +24,13 @@ set guioptions-=r  "scrollbar
 
 set encoding=UTF-8
 
+"Vim theme
 colorscheme gruvbox
 set background=dark
 
 set termguicolors
+
+hi Normal guibg=NONE ctermbg=NONE 
 
 "Sets how man" " y lines of history VIM has to remember
 set history=500
@@ -53,7 +55,10 @@ set incsearch
 set showmatch
 
 "No annoying sound on errors
-set belloff=all
+set noerrorbells
+set novisualbell
+"set t_vb=
+"set tm=500
 
 "Turn backup off, since most stuff is in SVN, git etc. anyway...
 set nobackup
@@ -98,7 +103,14 @@ set nohlsearch
 set hidden
 
 "Plugin Toggle keys
+"Undotree
 nnoremap <C-l> :UndotreeToggle<CR>
+
+"Vim Surround
+"Surround world
+nmap <leader>d ysiw
+"Surround line
+nmap <leader>s yss
 
 "Leader key remapped to space key
 let mapleader = " "
@@ -112,8 +124,8 @@ nnoremap <leader>f z=
 
 "Tabs
 "Switch tab
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>l :wincmd l<CR>
+nnoremap H :wincmd h<CR>
+nnoremap L :wincmd l<CR>
 "Resize tab
 nnoremap <silent> <Leader>. :vertical resize +10<CR>
 nnoremap <silent> <Leader>, :vertical resize -10<CR>
@@ -121,7 +133,7 @@ nnoremap <silent> <Leader>, :vertical resize -10<CR>
 nnoremap <leader>pn :wincmd v<CR>
 
 "Better Y
-nnoremap Y y$
+nnoremap Y Vy
 
 "Makes u (undo) only undo to the mark I set.
 inoremap , ,<c-g>u
@@ -134,9 +146,12 @@ inoremap ? ?<c-g>u
 "Moving text
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-inoremap <C-j> <esc>:m .+1<CR>==
-inoremap <C-k> <esc>:m .-2<CR>==
 nnoremap <leader>k :m .-2<CR>==
 nnoremap <leader>j :m .+1<CR>==
 
-nnoremap <leader>a $a;<Esc>
+"Search key
+nnoremap - /
+
+"remap {  } jump paragraph up and down
+nnoremap J }
+nnoremap K {
