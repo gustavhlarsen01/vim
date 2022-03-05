@@ -7,12 +7,14 @@
 
 filetype off
 
-call plug#begin('C:\Users\gusta\vimfiles\plugged')
+call plug#begin('C:\Users\Gustav\vimfiles\autoload\')
 
 " Better syntax support
 Plug 'sheerun/vim-polyglot'
 " Shows undo tree as a gui
 Plug 'mbbill/undotree'
+"Gruvbox
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -28,9 +30,10 @@ set encoding=UTF-8
 colorscheme gruvbox
 set background=dark
 
+syntax on
 set termguicolors
 
-hi Normal guibg=NONE ctermbg=NONE 
+"hi Normal guibg=NONE ctermbg=NONE 
 
 "Sets how man" " y lines of history VIM has to remember
 set history=500
