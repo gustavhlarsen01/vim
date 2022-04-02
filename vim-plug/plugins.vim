@@ -8,10 +8,15 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
-    "gruvbox theme
+	"Fuzzy finder
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
+    "theme
     Plug 'gruvbox-community/gruvbox' 
-"    Plug 'morhetz/gruvbox'
-	Plug 'ful1e5/onedark.nvim'
+	
+	"Nerdtree
+	Plug 'preservim/nerdtree'
+	Plug 'ryanoasis/vim-devicons'
  
 	" Shows undo tree as a gui
 	Plug 'mbbill/undotree'

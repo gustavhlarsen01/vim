@@ -96,13 +96,16 @@ set hidden
 
 "Plugin Toggle keys
 "Undotree
-nnoremap <C-l> :UndotreeToggle<CR>
+nmap <M-u> :UndotreeToggle<CR>
+nmap <M-t> :NERDTreeToggle<CR>
+nmap <M-m> :FZF<CR>
+
 
 "Vim Surround
 "Surround world
-nmap <leader>d ysiw
+nmap <M-d> ysiw
 "Surround line
-nmap <leader>s yss
+nmap <M-s> yss
 
 "Leader key remapped to space key
 let mapleader = " "
@@ -116,16 +119,16 @@ nnoremap <leader>f z=
 
 "Tabs
 "Switch tab
-nnoremap H :wincmd h<CR>
-nnoremap L :wincmd l<CR>
+nnoremap <C-h> :wincmd h<CR>
+nnoremap <C-l> :wincmd l<CR>
 "Resize tab
 nnoremap <silent> <Leader>. :vertical resize +10<CR>
 nnoremap <silent> <Leader>, :vertical resize -10<CR>
 "Open new tab
 nnoremap <leader>pn :wincmd v<CR>
 
-"Better Y
-nnoremap Y Vy
+"Make C select word under cursor
+nnoremap <leader>c viw
 
 "Makes u (undo) only undo to the mark I set.
 inoremap , ,<c-g>u
@@ -145,5 +148,5 @@ nnoremap <leader>j :m .+1<CR>==
 nnoremap - /
 
 "remap {  } jump paragraph up and down
-nnoremap J }
-nnoremap K {
+nnoremap <C-j> }
+nnoremap <C-k> {
