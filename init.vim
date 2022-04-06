@@ -4,6 +4,25 @@
 "f: Spell check
 "pn: Split screen to duplicate
 
+"Free keys
+"t:
+"n:
+"m:
+"Q:
+"W:
+"E:
+"R:
+"T:
+"Y:
+"H:
+"J:
+"K:
+"L:
+"X:
+"B:
+"N:
+"M:
+
 
 filetype off
 
@@ -83,7 +102,7 @@ highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 set cursorline
 
 "keep focus on the line in the middle of the screen
-set scrolloff=14
+set scrolloff=12
 
 "highlights the error in a column on the side
 "set signcolumn=yes
@@ -94,25 +113,24 @@ set nohlsearch
 "keeps files open as buffers, in the background. (So I don't have to worry about saving them.)
 set hidden
 
-"Plugin Toggle keys
-"Undotree
-nmap <M-u> :UndotreeToggle<CR>
-nmap <M-t> :NERDTreeToggle<CR>
-nmap <M-m> :FZF<CR>
-
-
-"Vim Surround
-"Surround world
-nmap <M-d> ysiw
-"Surround line
-nmap <M-s> yss
-
-"Leader key remapped to space key
-let mapleader = " "
-
 let g:netrw_browser_split=2
 let g:netrw_banner = 0
 let g:netrw_winsize = 25
+
+"Plugin Toggle keys
+"Undotree
+nmap <C-u> :UndotreeToggle<CR>
+nmap <C-t> :NERDTreeToggle<CR>
+nmap <C-m> :FZF<CR>
+
+"Vim Surround
+"Surround world
+nmap <leader>d ysiw
+"Surround line
+nmap <leader>s yss
+
+"Leader key remapped to space key
+let mapleader = " "
 
 "Spell check
 nnoremap <leader>f z=
@@ -127,8 +145,8 @@ nnoremap <silent> <Leader>, :vertical resize -10<CR>
 "Open new tab
 nnoremap <leader>pn :wincmd v<CR>
 
-"Make C select word under cursor
-nnoremap <leader>c viw
+"Make C replace word under cursor
+nnoremap C viwc
 
 "Makes u (undo) only undo to the mark I set.
 inoremap , ,<c-g>u
