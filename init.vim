@@ -5,14 +5,12 @@
 "pn: Split screen to duplicate
 
 "Free keys
-"t:
 "n:
 "m:
 "Q:
 "W:
 "E:
 "R:
-"T:
 "Y:
 "H:
 "J:
@@ -125,9 +123,12 @@ nmap <C-m> :FZF<CR>
 
 "Vim Surround
 "Surround world
-nmap <leader>d ysiw
+nmap t ysiw
 "Surround line
-nmap <leader>s yss
+nmap T yss
+
+"Make C replace word under cursor
+nnoremap C viwc
 
 "Leader key remapped to space key
 let mapleader = " "
@@ -144,9 +145,6 @@ nnoremap <silent> <Leader>. :vertical resize +10<CR>
 nnoremap <silent> <Leader>, :vertical resize -10<CR>
 "Open new tab
 nnoremap <leader>pn :wincmd v<CR>
-
-"Make C replace word under cursor
-nnoremap C viwc
 
 "Makes u (undo) only undo to the mark I set.
 inoremap , ,<c-g>u
