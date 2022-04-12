@@ -117,9 +117,9 @@ let g:netrw_winsize = 25
 
 "Plugin Toggle keys
 "Undotree
-nmap <C-u> :UndotreeToggle<CR>
-nmap <C-t> :NERDTreeToggle<CR>
-nmap <C-m> :FZF<CR>
+nnoremap <C-u> :UndotreeToggle<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-m> :FZF<CR>
 
 "Vim Surround
 "Surround world
@@ -138,8 +138,8 @@ nnoremap <leader>f z=
 
 "Tabs
 "Switch tab
-nnoremap <C-h> :wincmd h<CR>
-nnoremap <C-l> :wincmd l<CR>
+nnoremap <C-j> :wincmd h<CR>
+nnoremap <C-k> :wincmd l<CR>
 "Resize tab
 nnoremap <silent> <Leader>. :vertical resize +10<CR>
 nnoremap <silent> <Leader>, :vertical resize -10<CR>
@@ -164,5 +164,11 @@ nnoremap <leader>j :m .+1<CR>==
 nnoremap - /
 
 "remap {  } jump paragraph up and down
-nnoremap <C-j> }
-nnoremap <C-k> {
+nnoremap J }
+nnoremap K {
+
+"Visual mode
+vnoremap L $
+vnoremap H 0
+onoremap L $
+onoremap H 0
