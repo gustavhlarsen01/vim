@@ -26,16 +26,16 @@ filetype off
 
 call plug#begin('C:\Users\Gustav\AppData\Local\nvim-data\site\autoload')
 
-  "theme
-  Plug 'gruvbox-community/gruvbox' 
- 
-	" Shows undo tree as a gui
-  	Plug 'mbbill/undotree'
+	"theme
+	Plug 'gruvbox-community/gruvbox' 
 
-  " quoting/parenthesizing made simple
-    Plug 'tpope/vim-surround'
+	"Shows undo tree as a gui
+	Plug 'mbbill/undotree'
 
-	" Auto pairs for '(' '[' '{'
+	"quoting/parenthesizing made simple
+	Plug 'tpope/vim-surround'
+
+	"Auto pairs for '(' '[' '{'
 	Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
