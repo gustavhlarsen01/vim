@@ -24,12 +24,28 @@
 
 filetype off
 
+call plug#begin('C:\Users\Gustav\AppData\Local\nvim-data\site\autoload')
+
+  "theme
+  Plug 'gruvbox-community/gruvbox' 
+ 
+	" Shows undo tree as a gui
+  	Plug 'mbbill/undotree'
+
+  " quoting/parenthesizing made simple
+    Plug 'tpope/vim-surround'
+
+	" Auto pairs for '(' '[' '{'
+	Plug 'jiangmiao/auto-pairs'
+
+call plug#end()
+
 "Python highlight problem
 let python_highlight_all = 1
 let python_highlight_space_errors = 0
 
 "plugins
-source $HOME/.config/nvim/vim-plug/plugins.vim
+"source C:\Users\Gustav\AppData\Local\nvim\vim-plug\plugins.vim
 
 set encoding=UTF-8
 
@@ -38,8 +54,6 @@ colorscheme gruvbox
 set background=dark
 
 set termguicolors
-
-hi Normal guibg=NONE ctermbg=NONE 
 
 "Sets how man" " y lines of history VIM has to remember
 set history=500
@@ -172,3 +186,7 @@ vnoremap L $
 vnoremap H 0
 onoremap L $
 onoremap H 0
+
+nnoremap <leader>v <C-v>
+
+nnoremap n $
