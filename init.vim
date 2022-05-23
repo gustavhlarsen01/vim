@@ -26,14 +26,11 @@ filetype off
 
 call plug#begin('C:\Users\Gustav\AppData\Local\nvim-data\site\autoload')
 
-	"theme
-	Plug 'gruvbox-community/gruvbox' 
-
-	"Shows undo tree as a gui
-	Plug 'mbbill/undotree'
-
-	"quoting/parenthesizing made simple
-	Plug 'tpope/vim-surround'
+  "Theme
+  Plug 'gruvbox-community/gruvbox' 
+ 
+	"Quoting/Parenthesizing made simple
+    Plug 'tpope/vim-surround'
 
 	"Auto pairs for '(' '[' '{'
 	Plug 'jiangmiao/auto-pairs'
@@ -44,14 +41,14 @@ call plug#end()
 let python_highlight_all = 1
 let python_highlight_space_errors = 0
 
-"plugins
-"source C:\Users\Gustav\AppData\Local\nvim\vim-plug\plugins.vim
-
 set encoding=UTF-8
 
 "Vim theme
 colorscheme gruvbox
 set background=dark
+
+"No background
+hi Normal guibg=NONE ctermbg=NONE
 
 set termguicolors
 
@@ -80,8 +77,6 @@ set showmatch
 "No annoying sound on errors
 set noerrorbells
 set novisualbell
-"set t_vb=
-"set tm=500
 
 "Turn backup off, since most stuff is in SVN, git etc. anyway...
 set nobackup
@@ -116,9 +111,6 @@ set cursorline
 "keep focus on the line in the middle of the screen
 set scrolloff=12
 
-"highlights the error in a column on the side
-"set signcolumn=yes
-
 "No highlight after search
 set nohlsearch
 
@@ -128,12 +120,6 @@ set hidden
 let g:netrw_browser_split=2
 let g:netrw_banner = 0
 let g:netrw_winsize = 25
-
-"Plugin Toggle keys
-"Undotree
-nnoremap <C-u> :UndotreeToggle<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-m> :FZF<CR>
 
 "Vim Surround
 "Surround world
@@ -152,11 +138,14 @@ nnoremap <leader>f z=
 
 "Tabs
 "Switch tab
-nnoremap <C-j> :wincmd h<CR>
-nnoremap <C-k> :wincmd l<CR>
+nnoremap <Left> :wincmd h<CR>
+nnoremap <Right> :wincmd l<CR>
+nnoremap <Down> :wincmd j<CR>
+nnoremap <Up> :wincmd k<CR>
+
 "Resize tab
-nnoremap <silent> <Leader>. :vertical resize +10<CR>
-nnoremap <silent> <Leader>, :vertical resize -10<CR>
+nnoremap <silent> <leader>. :vertical resize +10<CR>
+nnoremap <silent> <leader>, :vertical resize -10<CR>
 "Open new tab
 nnoremap <leader>pn :wincmd v<CR>
 
