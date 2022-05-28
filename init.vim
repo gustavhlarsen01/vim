@@ -38,18 +38,15 @@ call plug#begin('C:\Users\Gustav\AppData\Local\nvim-data\site\autoload')
 call plug#end()
 
 "Python highlight problem
-let python_highlight_all = 1
+let python_highlight_all = 0
 let python_highlight_space_errors = 0
 
 set encoding=UTF-8
 
-"Vim theme
 colorscheme gruvbox
 set background=dark
-
 "No background
-hi Normal guibg=NONE ctermbg=NONE
-
+"hi Normal guibg=NONE ctermbg=NONE
 set termguicolors
 
 "Sets how man" " y lines of history VIM has to remember
@@ -59,16 +56,11 @@ set history=500
 set autoread
 au FocusGained,BufEnter * checktime
 
-"Ignore case when searching
-set ignorecase
-
-"When searching try to be smart about cases
-set smartcase
-
 "Highlight search results
 set hlsearch
-
-"Makes search act like search in modern browsers
+set nohlsearch
+set ignorecase
+set smartcase
 set incsearch
 
 "Show matching brackets when text indicator is over them
@@ -89,15 +81,11 @@ set noswapfile
 set shiftwidth=4
 set tabstop=4
 
-"Be smart when using tabs ;)
 set smarttab
 
-"Auto indent
-set ai 
-"Smart indent
-set si 
+set autoindent
+set smartindent
 
-"set nowrap "Wrap lines
 set wrap linebreak 
 
 "Numbers on the side
@@ -110,9 +98,6 @@ set cursorline
 
 "keep focus on the line in the middle of the screen
 set scrolloff=12
-
-"No highlight after search
-set nohlsearch
 
 "keeps files open as buffers, in the background. (So I don't have to worry about saving them.)
 set hidden
