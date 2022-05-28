@@ -116,8 +116,8 @@ let mapleader = " "
 nnoremap <leader>f z=
 
 "Switch tab
-nnoremap m :wincmd h<CR>
-nnoremap n :wincmd l<CR>
+nnoremap n :wincmd h<CR>
+nnoremap m :wincmd l<CR>
 nnoremap N :wincmd j<CR>
 nnoremap M :wincmd k<CR>
 
