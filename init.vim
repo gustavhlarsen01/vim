@@ -66,7 +66,6 @@ set incsearch
 "Show matching brackets when text indicator is over them
 set showmatch
 
-"No annoying sound on errors
 set noerrorbells
 set novisualbell
 
@@ -88,7 +87,6 @@ set smartindent
 
 set wrap linebreak 
 
-"Numbers on the side
 set number
 set relativenumber
 
@@ -96,7 +94,6 @@ set relativenumber
 highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 set cursorline
 
-"keep focus on the line in the middle of the screen
 set scrolloff=12
 
 "keeps files open as buffers, in the background. (So I don't have to worry about saving them.)
@@ -107,26 +104,22 @@ let g:netrw_banner = 0
 let g:netrw_winsize = 25
 
 "Vim Surround
-"Surround world
 nmap t ysiw
-"Surround line
 nmap T yss
 
-"Make C replace word under cursor
+"replace word under cursor
 nnoremap C viwc
 
-"Leader key remapped to space key
 let mapleader = " "
 
 "Spell check
 nnoremap <leader>f z=
 
-"Tabs
 "Switch tab
-nnoremap <Left> :wincmd h<CR>
-nnoremap <Right> :wincmd l<CR>
-nnoremap <Down> :wincmd j<CR>
-nnoremap <Up> :wincmd k<CR>
+nnoremap m :wincmd h<CR>
+nnoremap n :wincmd l<CR>
+nnoremap N :wincmd j<CR>
+nnoremap M :wincmd k<CR>
 
 "Resize tab
 nnoremap <silent> <leader>. :vertical resize +10<CR>
@@ -162,5 +155,3 @@ onoremap L $
 onoremap H 0
 
 nnoremap <leader>v <C-v>
-
-nnoremap n $
