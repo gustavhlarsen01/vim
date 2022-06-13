@@ -10,6 +10,9 @@ call plug#begin('C:\Users\Gustav\AppData\Local\nvim-data\site\autoload')
 
 call plug#end()
 
+#Vim Abbreviations
+source 'C:\Users\Gustav\Documents\GitHub\vim\abb.vim'
+
 "Python highlight problem
 let python_highlight_all = 0
 let python_highlight_space_errors = 0
@@ -59,12 +62,12 @@ set smartindent
 
 set wrap linebreak 
 
-set number
-set relativenumber
-
 "make nvim only highlight number at the start of a line
 highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 set cursorline
+
+set number
+set relativenumber
 
 set scrolloff=12
 
