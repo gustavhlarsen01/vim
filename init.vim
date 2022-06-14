@@ -1,17 +1,11 @@
+
+
+" Links to parts of the config.
+source C:\Users\Gustav\Documents\GitHub\vim\vim-plug\plugged.vim
+source C:\Users\Gustav\Documents\GitHub\vim\keybindings.vim
+source C:\Users\Gustav\Documents\GitHub\vim\abb.vim
+
 filetype off
-
-call plug#begin('C:\Users\Gustav\AppData\Local\nvim-data\site\autoload')
-
-	"Theme
-	Plug 'gruvbox-community/gruvbox'
-
-	Plug 'tpope/vim-surround'
-	Plug 'jiangmiao/auto-pairs'
-
-call plug#end()
-
-#Vim Abbreviations
-source 'C:\Users\Gustav\Documents\GitHub\vim\abb.vim'
 
 "Python highlight problem
 let python_highlight_all = 0
@@ -19,10 +13,10 @@ let python_highlight_space_errors = 0
 
 set encoding=UTF-8
 
-"hi Normal guibg=NONE ctermbg=NONE
 colorscheme gruvbox
 set background=dark
 set termguicolors
+"hi Normal guibg=NONE ctermbg=NONE
 
 "Sets how man" " y lines of history VIM has to remember
 set history=500
@@ -57,8 +51,8 @@ set tabstop=4
 
 set smarttab
 
-set autoindent
-set smartindent
+"set autoindent
+"set smartindent
 
 set wrap linebreak 
 
@@ -73,13 +67,3 @@ set scrolloff=12
 
 "keeps files open as buffers, in the background. (So I don't have to worry about saving them.)
 set hidden
-
-let mapleader = " "
-
-"Makes u (undo) only undo to the mark I set.
-inoremap , ,<c-g>u
-inoremap . .<c-g>u
-inoremap : :<c-g>u
-inoremap ; ;<c-g>u
-inoremap ! !<c-g>u
-inoremap ? ?<c-g>u

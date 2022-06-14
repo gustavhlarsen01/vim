@@ -1,12 +1,10 @@
-call plug#begin('C:\Users\Gustav\AppData\Local\nvim-data\site\autoload')
+call plug#begin('C:\Users\Gustav\AppData\Local\nvim-data\site\autoload') 
 
-	"Theme
-	Plug 'gruvbox-community/gruvbox'
+    "Theme
+    Plug 'gruvbox-community/gruvbox'
 
-	"Quoting/Parenthesizing made simple
-	Plug 'tpope/vim-surround'
-
-	"Auto pairs for '(' '[' '{'
-	Plug 'jiangmiao/auto-pairs'
+    Plug 'tpope/vim-surround'
+    Plug 'jiangmiao/auto-pairs'
+	Plug 'sheerun/vim-polyglot'
 
 call plug#end()
