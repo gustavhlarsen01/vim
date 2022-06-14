@@ -1,7 +1,7 @@
 
 
 " Links to parts of the config.
-source C:\Users\Gustav\Documents\GitHub\vim\vim-plug\plugged.vim
+source C:\Users\Gustav\Documents\GitHub\vim\plugged.vim
 source C:\Users\Gustav\Documents\GitHub\vim\keybindings.vim
 source C:\Users\Gustav\Documents\GitHub\vim\abb.vim
 
