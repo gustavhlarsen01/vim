@@ -42,17 +42,17 @@ set novisualbell
 set nobackup
 set nowb
 set noswapfile
-
+    
 "Use spaces instead of tabs
-"set expandtab
+set expandtab
 "1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
 
 set smarttab
 
-"set autoindent
-"set smartindent
+set autoindent
+set smartindent
 
 set wrap linebreak 
 
@@ -67,3 +67,11 @@ set scrolloff=12
 
 "keeps files open as buffers, in the background. (So I don't have to worry about saving them.)
 set hidden
+
+"NERDTree config
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+let NERDTreeQuitOnOpen=1
+" enable line numbers
+let NERDTreeShowLineNumbers=1
+" make sure relative line numbers are used
+autocmd FileType nerdtree setlocal relativenumber
