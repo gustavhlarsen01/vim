@@ -12,10 +12,7 @@ let mapleader = " "
 " Spell checker.
 map <leader>fs z=
 " Start Fuzzy Finder
-map <leader>ff :Files<CR>
-" make narrow paragraph
-map <leader>ysm :set tw=52<CR>0i<tab><tab><tab><esc>gqq
-map <leader>yst 0i<tab><tab><tab><tab><tab><tab><esc>
+map <leader>fzf :Files<CR>
 " Move Windwos
 map <leader>h :winc h<CR>
 map <leader>l :winc l<CR>
@@ -25,7 +22,8 @@ map <leader>j :winc j<CR>
 map <leader>nv :vsplit<CR>
 map <leader>nh :hsplit<CR>
 " Toggle NERDTree on and off
-map <leader>nt :NERDTreeToggle<CR>
+map <leader>ntt :NERDTreeToggle<CR>
+map <leader>ntc :NERDTree C:\Users\Gustav\Documents<CR>
 
 
 "			INSERT MODE
@@ -37,16 +35,4 @@ inoremap : :<c-g>u
 inoremap ; ;<c-g>u
 inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
-
-
-
-" function! FunctionTest()
-" 	let var1 = Getchar()
-" 	if var1 == "v" 
-" 		return "rV" 
-" 	else
-" 		return "rG"
-" endfunction
-" 
-" map <leader>g FunctionTest()
 
