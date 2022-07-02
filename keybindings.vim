@@ -9,21 +9,25 @@ endfun
 "			LEADER KEYS
 
 let mapleader = " "
-" Spell checker.
-map <leader>fs z=
+
 " Start Fuzzy Finder
-map <leader>fzf :Files<CR>
+map <leader>fj :Files<CR>
+
+"Buffers
+map <leader>bj :Buffers<CR>
+map <leader>bk :bdelete<CR>
+
+"Explore
+map <leader>ej :Ex<CR>
+
 " Move Windwos
 map <leader>h :winc h<CR>
 map <leader>l :winc l<CR>
 map <leader>k :winc k<CR>
 map <leader>j :winc j<CR>
 " Split window
-map <leader>nv :vsplit<CR>
-map <leader>nh :hsplit<CR>
-" Toggle NERDTree on and off
-map <leader>ntt :NERDTreeToggle<CR>
-map <leader>ntc :NERDTree C:\Users\Gustav\Documents<CR>
+map <leader>sl :vsplit<CR>
+map <leader>sk :split<CR>
 
 
 "			INSERT MODE
@@ -35,4 +39,3 @@ inoremap : :<c-g>u
 inoremap ; ;<c-g>u
 inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
-
