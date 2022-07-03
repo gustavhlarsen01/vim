@@ -26,7 +26,7 @@ map <leader>l :winc l<CR>
 map <leader>k :winc k<CR>
 map <leader>j :winc j<CR>
 " Split window
-map <leader>sl :vsplit<CR>
+map <leader>sj :vsplit<CR>
 map <leader>sk :split<CR>
 
 
