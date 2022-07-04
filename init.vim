@@ -67,3 +67,6 @@ set scrolloff=12
 
 "keeps files open as buffers, in the background. (So I don't have to worry about saving them.)
 set hidden
+
+"hide signcolumn
+set scl=no

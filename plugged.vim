@@ -12,6 +12,7 @@ call plug#begin('C:\Users\Gustav\AppData\Local\nvim-data\site\autoload')
 
     "LSP
     Plug 'neovim/nvim-lspconfig'
+    Plug 'vim-scripts/AutoComplPop'
     Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'hrsh7th/cmp-buffer'
     Plug 'hrsh7th/cmp-path'
@@ -20,7 +21,9 @@ call plug#begin('C:\Users\Gustav\AppData\Local\nvim-data\site\autoload')
 
 call plug#end()
 
-set completeopt=menu,menuone,noselect
+
+set completeopt=menuone,longest
+set shortmess+=c
 
 lua <<EOF
   -- Setup nvim-cmp.
@@ -84,5 +87,10 @@ lua <<EOF
       { name = 'cmdline' }
     })
   })
+
+    local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+    require'lspconfig'.clangd.setup{}
+    require'lspconfig'.pyright.setup{}
 
 EOF
