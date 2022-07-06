@@ -6,6 +6,7 @@ call plug#begin('C:\Users\Gustav\AppData\Local\nvim-data\site\autoload')
     Plug 'tpope/vim-surround'
     Plug 'jiangmiao/auto-pairs'
 	Plug 'sheerun/vim-polyglot' " Syntax highlight
+"   Plug 'nvim-treesitter/nvim-treesitter'
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
     Plug 'bling/vim-bufferline'
@@ -93,4 +94,19 @@ lua <<EOF
     require'lspconfig'.clangd.setup{}
     require'lspconfig'.pyright.setup{}
 
+
+    --    require'nvim-treesitter.configs'.setup {
+    --    
+    --        ensure_installed = { "c", "python"},
+    --        sync_install = false,
+    --        ignore_install = {},
+    --    
+    --        highlight = {
+    --            enable = true,
+    --            disable = {},
+    --            additional_vim_regex_highlighting = True,
+    --        },
+    --    }
+
 EOF
+
