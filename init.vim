@@ -1,9 +1,9 @@
 
 
 " Links to parts of the config.
-source C:\Users\Gustav\Documents\GitHub\vim\plugged.vim
-source C:\Users\Gustav\Documents\GitHub\vim\keybindings.vim
-source C:\Users\Gustav\Documents\GitHub\vim\abb.vim
+source C:\Users\Gustav\AppData\Local\nvim\plugged.vim
+source C:\Users\Gustav\AppData\Local\nvim\keybindings.vim
+source C:\Users\Gustav\AppData\Local\nvim\abb.vim
 
 filetype off
 
