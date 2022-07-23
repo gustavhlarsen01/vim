@@ -7,5 +7,7 @@ call plug#begin('C:\Users\Gustav\AppData\Local\nvim-data\site\autoload')
     Plug 'jiangmiao/auto-pairs'
 	Plug 'sheerun/vim-polyglot' " Syntax highlight
     Plug 'bling/vim-bufferline'
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
 
 call plug#end()
